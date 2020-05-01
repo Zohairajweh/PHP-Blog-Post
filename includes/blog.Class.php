@@ -1,11 +1,11 @@
 <?php
 class Blog {
-  public $id  = 0.00;
+  public $id  = 0;
   public $title = '';
   public $content  = '';
-  function __construct ( $id = 0.00, $title = 'no title', $content = 'Uncategorized' )
+  function __construct ( $id = 0, $title = 'no title', $content = 'Uncategorized' )
   {
-    if ( is_float( $id ) && !empty( $id ) )
+    if ( is_integer( $id ) && !empty( $id ) )
       $this->id = $id;
       if ( is_string( $title ) && !empty( $title ) )
       $this->title = $title;

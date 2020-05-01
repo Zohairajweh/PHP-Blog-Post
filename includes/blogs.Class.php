@@ -9,9 +9,9 @@ class Blogs
     { 
       $jsonString = file_get_contents( $jsonFilePath );
       $jsonObject = json_decode( $jsonString );
-      if ( is_array( $jsonObject->blogs ) )
+      if ( is_array( $jsonObject->articles ) )
       { 
-        $this->allBlogs = $jsonObject->blogs;
+        $this->allBlogs = $jsonObject->articles;
       }
       else
       { 
@@ -36,27 +36,27 @@ class Blogs
       echo '</ul>';
     }
   }
-  public function findBlogByIndex ( $ud = FALSE )
+  public function findBlogByIndex ( $FindID = FALSE )
   { 
-    if ( is_integer( $ud ) )
+    if ( is_integer( $FindID ) )
     { 
-      if ( isset( $this->allBlogs[$ud] ) )
+      if ( isset( $this->allBlogs[$FindID] ) )
       { 
         $foundBlog = new Blog(
-          $this->allBlogs[$ud]->id,
-          $this->allBlogs[$ud]->title,
-          $this->allBlogs[$ud]->content
+          $this->allBlogs[$FindID]->id,
+          $this->allBlogs[$FindID]->title,
+          $this->allBlogs[$FindID]->content
         );
         $foundBlog->output();
       }
       else
       { 
-        echo '<p>Sorry, we couldn\'t find a blog at ID: '.$ud.'!</p>';
+        echo '<p>Sorry, we couldn\'t find a blog at ID: '.$FindID.'!</p>';
       }
     }
     else
     { 
-      echo '<p>No ID, or an invalid ID was passed; unable to find blog for ID: '.$ud.'.</p>';
+      echo '<p>No ID, or an invalid ID was passed; unable to find blog for ID: '.$FindID.'.</p>';
     }
   }
 }

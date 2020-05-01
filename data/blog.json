@@ -1,5 +1,5 @@
 {
-  "blogs": [
+  "articles": [
     { "id": 1, "title": "HTML5", "content": "HyperText Markup Language (version 5.)" },
     { "id": 2, "title": "CSS3", "content": "Cascading StyleSheets (version 3.)" },
     { "id": 3, "title": "Bootstrap", "content": "Bootstrap is a CSS framework, offering you a cornucopia of pre-set classes and styles out-of-the-box." },

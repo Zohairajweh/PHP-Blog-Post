@@ -16,12 +16,22 @@
     $blogs = new Blogs( dirname( __FILE__ ) . '/data/blog.json' );
     $blogs->output();
   ?>
+
   <h2>find blogs</h2>
   <p>blogs</p>
  
+  <form action="index.php" method="post">
+ <p>Enter you blogs ID : <input type="text" name="name" /></p>
+ <p><input type="submit" /></p>
+</form>
+
+Your blog is : <?php  $blogs->findBlogByIndex($_POST['name']); ?>
+
+
    <?php
-  
+
   $blogs->findBlogByIndex(4);
-?>>
+?>
+
 </body>
 </html>
