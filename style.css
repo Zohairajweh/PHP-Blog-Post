@@ -1,0 +1,27 @@
+
+h1{
+    text-align: center;
+}
+h2,p{text-align: left; color: darkred;}
+ul {
+
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+  }
+  
+  div{
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+     color: blue;  }
+  dl{
+      color: dodgerblue;
+      text-align: left;
+  }
+  dd{
+      color: rgb(41, 0, 226);
+      font-size: 18px;
+  }
+  dt{
+      color: red;
+      font-size: 22px;
+  }

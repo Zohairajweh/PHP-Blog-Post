@@ -18,11 +18,11 @@ class Blog {
     ob_start(); 
     ?>
       <dl>
-        <dt>id</dt>
+        <dt>ID : </dt>
         <dd><?php echo $this->id; ?></dd>
-        <dt>title</dt>
+        <dt>Title :</dt>
         <dd><?php echo $this->title; ?></dd>
-        <dt>content</dt>
+        <dt>Content : </dt>
         <dd><?php echo $this->content; ?></dd>
       </dl>
     <?php 
